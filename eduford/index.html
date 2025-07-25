@@ -8,12 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
 <section class="header">
     <nav>
         <a href="index.html"><img src="img/logo.png" alt=""></a>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
+            <span class="material-symbols-outlined" onclick="hideMenu()">close</span>
             <ul>
                 <li><a href="">HOME</a></li>
                 <li><a href="">ABOUT</a></li>
@@ -22,17 +24,32 @@
                 <li><a href="">CONTACT</a></li>
             </ul>
         </div>
+        <span class="material-symbols-outlined" onclick="showMenu()">menu</span>
     </nav>
 
 <div class="text-box">
     <h1>World's Biggest University</h1>
-    <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS, Javascript and you are good to go.</p>
-    <a href=""></a>
+    <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS, <br> Javascript and you are good to go.</p>
+    <a href="" class="hero-btn">Visit Us To Know More</a>
     <!--17:16 DE VIDEO-->
 </div>
 
 </section>
 
+<!-------JavaScript for Toggle Menu-------->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu (){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu (){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
 
 </body>
 </html>
